@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+    my_app:
+        build:
+            context: ./app
+    nginx:
+        restart: always
+        build:
+            context: ./nginx
+        ports:
+            - "88:80"
